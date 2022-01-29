@@ -54,12 +54,12 @@ jobs:
         with:
           dotnet-version: '5.0'
       - name: publish app
-        run: dotnet publish -c Release './Chapter 12/Chapter12.csproj'
+        run: dotnet publish -c Release './Chapter 12/Chapter_12_GitHubActions_Examples/Chapter12.csproj'
       - name: save artifacts
         uses: actions/upload-artifact@v2
         with:
           name: myWASM
-          path: './Chapter 12/bin/Release/net5.0/publish/wwwroot'
+          path: './Chapter 12/Chapter_12_GitHubActions_Examples/bin/Release/net5.0/publish/wwwroot'
   
   deploy:
     needs: build
